@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #00005a;
+}
+
+.quiz_container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #00005a;
+    background: #fff;
+    box-shadow: 0px 0px 3px #000;
+    padding: 1.1em 2rem 1.5em 2rem;
+    border-radius: 8px;
+}
+
+.quiz_container h2 {
+    border-bottom: 1px solid #00005a;
+    padding: 0em 0em .3em 0em;
+    margin: 0rem 0rem 1rem 0rem;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+.quiz_container .question {
+    margin: .5rem 0rem;
+    font-size: 1.4em;
+}
+
+.quiz_container .options .option {
+    border: 1px solid #00005a;
+    margin: 1rem 0rem;
+    padding: .5em;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.quiz_container .next {
+    align-self: center;
+    font-size: 1rem;
+    padding: .7em 2.8em;
+    border: none;
+    background-color: #00005a;
+    color: #fff;
+    border-radius: 5px;
+}
