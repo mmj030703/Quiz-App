@@ -24,19 +24,32 @@ body {
     box-shadow: 0px 0px 3px #000;
     padding: 1.1em 2rem 1.5em 2rem;
     border-radius: 8px;
+    width: 90%;
+    max-width: 460px;
+}
+
+.quiz_container .header {
+    display: flex;
+    border-bottom: 1px solid #00005a;
+    padding: 0em 0em 1em 0em;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .quiz_container h2 {
-    border-bottom: 1px solid #00005a;
-    padding: 0em 0em .3em 0em;
-    margin: 0rem 0rem 1rem 0rem;
     letter-spacing: 1px;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
+.quiz_container .header p {
+    font-size: 1.15rem;
+    align-self: flex-end;
+}
+
+.winningStatement,
 .quiz_container .question {
     margin: .5rem 0rem;
-    font-size: 1.4em;
+    font-size: 1.6rem;
 }
 
 .quiz_container .options .option {
@@ -44,15 +57,66 @@ body {
     margin: 1rem 0rem;
     padding: .5em;
     border-radius: 5px;
+    font-size: 1.2rem;
     font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
-.quiz_container .next {
+.quiz_container .options .option:hover {
+    background: #222;
+    color: #fff;
+    background-color: #;
+    border: 1px solid #222;
+}
+
+.quiz_container .next,
+.playAgain {
     align-self: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: .7em 2.8em;
     border: none;
     background-color: #00005a;
     color: #fff;
     border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.playAgain {
+    display: block;
+    align-self: center;
+    margin: 4rem 0 0 0;
+}
+
+.quiz_container .next:hover,
+.playAgain:hover {
+    background: #121296;
+}
+
+.finalScore_Container {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 9.5px;
+    }
 }
