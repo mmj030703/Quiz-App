@@ -1,3 +1,4 @@
+/** 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap');
 
 * {
@@ -46,7 +47,7 @@ body {
     align-self: flex-end;
 }
 
-.winningStatement,
+.finalScoreStatement,
 .quiz_container .question {
     margin: .5rem 0rem;
     font-size: 1.6rem;
@@ -59,6 +60,7 @@ body {
     border-radius: 5px;
     font-size: 1.2rem;
     font-weight: 600;
+    user-select: none;
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
@@ -101,6 +103,123 @@ body {
 
 .block {
     display: block;
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 9.5px;
+    }
+} 
+*/
+
+/** Way 2 */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #00005a;
+}
+
+.quiz_container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #00005a;
+    background: #fff;
+    box-shadow: 0px 0px 3px #000;
+    padding: 1.1em 2rem 1.5em 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 460px;
+    margin: 5rem auto;
+}
+
+.quiz_container .header {
+    display: flex;
+    border-bottom: 1px solid #00005a;
+    padding: 0em 0em 1em 0em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz_container h2 {
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+}
+
+.quiz_container .header p {
+    font-size: 1.15rem;
+    align-self: flex-end;
+}
+
+.finalScoreStatement,
+.quiz_container .question {
+    margin: .5rem 0rem;
+    font-size: 1.6rem;
+}
+
+.quiz_container .options .option {
+    border: 1px solid #00005a;
+    margin: 1rem 0rem;
+    padding: .5em;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.quiz_container .options .option:hover {
+    background: #222;
+    color: #fff;
+    background-color: #;
+    border: 1px solid #222;
+}
+
+.quiz_container .next {
+    align-self: center;
+    font-size: 1.1rem;
+    padding: .7em 2.8em;
+    border: none;
+    background-color: #00005a;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.quiz_container .next:hover {
+    background: #121296;
+}
+
+.correct {
+    background: #138113;
+    color: #fff;
+}
+
+.incorrect {
+    background: #cf2020;
+    color: #fff;
 }
 
 @media screen and (max-width: 550px) {
